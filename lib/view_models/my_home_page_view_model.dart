@@ -30,7 +30,7 @@ class MyHomePageViewModel extends ChangeNotifier {
 
   _loadCounter() async {
     final prefs = await SharedPreferences.getInstance();
-    _counter = prefs.getInt(CounterKeys.counterKey) ?? 0;
+    _counter = prefs.getInt(CounterKeys.counterKey);
     notifyListeners();
   }
 }
